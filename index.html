@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Password Generator</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <ul class="nav navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link h3">Password Generator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+    <div class="jumbotron bg-light mt-5">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Password Length</label>
+                <select class="form-control" id="FormControlSelect">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="special-characters">Special Characters</label>
+                <input type="text" class="form-control" id="special-characters">
+            </div>
+            <div class="form-group">
+                <label for="numeric-characters">Numeric Characters</label>
+                <input type="text" class="form-control" id="numeric-characters">
+            </div>
+            <div class="form-group">
+                <label for="uppercase-characters">Uppercase Characters</label>
+                <input type="text" class="form-control" id="uppercase-characters">
+            </div>
+            <div class="form-group">
+                <label for="lowercase-characters">Lowercase Characters</label>
+                <input type="text" class="form-control" id="lowercase-characters">
+            </div>
+        </form>
+        <a class="btn btn-danger btn-lg" id="generatePW" href="#" role="button">Generate Password</a>
+        <hr class="my-4">
+        <textarea class="form-control" id="textArea" rows="3"></textarea>
+        <!-- <hr class="my-4">
+        <a class="btn btn-primary btn-lg" id="copy" href="#" role="button">Copy to Clipboard</a> -->
+    </div>
+</div>
+<script src="assets/script.js"></script>
+</body>
+</html>
