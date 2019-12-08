@@ -24,9 +24,16 @@ var charTypes = [];
 var randomCharChoice = "";
 var password = "";
 
+var isGenerated = false;
+
 pwGen.addEventListener("click", function(event){
 
     event.preventDefault();
+
+    if(isGenerated){
+        return false;
+    }
+
     pwLen = parseInt(pwLenSelector.options[pwLenSelector.selectedIndex].value);
 
     if (!$("#special-characters").is(":checked") && !$("#numeric-characters").is(":checked") && !$("#uppercase-characters").is(":checked") &&  !$("#lowercase-characters").is(":checked")){
@@ -93,5 +100,6 @@ pwGen.addEventListener("click", function(event){
     };
 
     textbox.innerHTML=password;
+    isGenerated = true;
 
 });
