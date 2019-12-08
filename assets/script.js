@@ -28,6 +28,10 @@ pwGen.addEventListener("click", function(event){
 
     event.preventDefault();
     pwLen = parseInt(pwLenSelector.options[pwLenSelector.selectedIndex].value);
+
+    if (!$("#special-characters").is(":checked") && !$("#numeric-characters").is(":checked") && !$("#uppercase-characters").is(":checked") &&  !$("#lowercase-characters").is(":checked")){
+        alert("Check at least one type of character");
+    }
     
     //Determine which checkboxes are checked
     if($("#special-characters").is(':checked')){
