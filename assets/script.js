@@ -21,6 +21,8 @@ var textbox = document.getElementById("textArea");
 var copybtn = document.getElementById("copy");
 
 var charTypes = [];
+var randomCharChoice = "";
+var password = "";
 
 pwGen.addEventListener("click", function(event){
 
@@ -53,11 +55,39 @@ pwGen.addEventListener("click", function(event){
     console.log("pwlength = " + pwLen);
     console.log(charTypes);
 
-    //Randomly choose which char set to select from
-    var randomSetChoice = charTypes[Math.floor(Math.random() * charTypes.length)];
-    console.log(randomSetChoice);
+    //Loop through this as many times as is in pwLen
 
-    //Randomly choose chars from the selected set
+    for (i = 0; i < pwLen; i++){
+        //Randomly choose which char set to select from
+        var randomSetChoice = charTypes[Math.floor(Math.random() * charTypes.length)];
+        // console.log(randomSetChoice);
 
-    
+        //Randomly choose chars from the selected set
+        if (randomSetChoice == "Spec"){
+            randomCharChoice = specialChar[Math.floor(Math.random() * specialChar.length)];
+            password += randomCharChoice;
+            // console.log("password: " + password);
+        };
+
+        if (randomSetChoice == "Num"){
+            randomCharChoice = numericChar[Math.floor(Math.random() * numericChar.length)];
+            password += randomCharChoice;
+            // console.log("password: " + password);
+        };
+
+        if (randomSetChoice == "Upper"){
+            randomCharChoice = alphabetChar[Math.floor(Math.random() * alphabetChar.length)];
+            password += randomCharChoice;
+            // console.log("password: " + password);
+        };
+
+        if (randomSetChoice == "Lower"){
+            randomCharChoice = alphabetUChar[Math.floor(Math.random() * alphabetUChar.length)];
+            password += randomCharChoice;
+            // console.log("password: " + password);
+        };
+    };
+
+    textbox.innerHTML=password;
+
 });
