@@ -20,36 +20,40 @@ var specialChar = "!@#$%^&*()_+-={}|\\][;'\":<>?/.,~`".split("");
 var textbox = document.getElementById("textArea");
 var copybtn = document.getElementById("copy");
 
-var includeSpecChar = false;
-var includeNumChar = false;
-var includeUCChar = false;
-var includeLCChar = false;
-
+var charTypes = [];
 
 pwGen.addEventListener("click", function(event){
 
     event.preventDefault();
-    // pwLen = parseInt(pwLenSelector.options[pwLenSelector.selectedIndex].value);
-    // validateInput()
-
+    pwLen = parseInt(pwLenSelector.options[pwLenSelector.selectedIndex].value);
+    
+    //Determine which checkboxes are checked
     if($("#special-characters").is(':checked')){
         console.log("spec char checked");
-        includeSpecChar = true;
+        charTypes.push("Spec");
     }
 
     if($("#numeric-characters").is(':checked')){
         console.log("numeric checked");
-        includeNumChar = true;
+        charTypes.push("Num");
     }
 
     if($("#uppercase-characters").is(':checked')){
         console.log("upper case checked");
-        includeUCChar = true;
+        charTypes.push("Upper");
     }
 
     if($("#lowercase-characters").is(':checked')){
         console.log("lowercase checked");
-        includeLCChar = true;
+        charTypes.push("Lower");
+
     }
+
+    //Make sure the pwLength is correct
+    console.log("pwlength = " + pwLen);
+    console.log(charTypes);
+
+    //Randomly choose which char set to select from
+    //Randomly choose chars from the selected set
     
 });
