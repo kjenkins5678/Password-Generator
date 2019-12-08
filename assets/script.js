@@ -54,6 +54,10 @@ pwGen.addEventListener("click", function(event){
     console.log(charTypes);
 
     //Randomly choose which char set to select from
+    var randomSetChoice = charTypes[Math.floor(Math.random() * charTypes.length)];
+    console.log(randomSetChoice);
+
     //Randomly choose chars from the selected set
+
     
 });
