@@ -18,7 +18,7 @@ var alphabetUChar = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
 var numericChar = "1234567890".split("");
 var specialChar = "!@#$%^&*()_+-={}|\\][;'\":<>?/.,~`".split("");
 var textbox = document.getElementById("textArea");
-var copybtn = document.getElementById("copy");
+// var copybtn = document.getElementById("copy");
 
 var charTypes = [];
 var randomCharChoice = "";
@@ -62,9 +62,8 @@ pwGen.addEventListener("click", function(event){
 
     }
 
-    //Make sure the pwLength is correct
-    console.log("pwlength = " + pwLen);
-    console.log(charTypes);
+    // console.log("pwlength = " + pwLen);
+    // console.log(charTypes);
 
     //Loop through this as many times as is in pwLen
 
